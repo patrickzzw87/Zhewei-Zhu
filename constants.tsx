@@ -1,5 +1,5 @@
 
-import { NavItem, SectionId } from './types';
+import { NavItem, SectionId } from './types.ts';
 
 export const NAVIGATION_ITEMS: NavItem[] = [
   { 

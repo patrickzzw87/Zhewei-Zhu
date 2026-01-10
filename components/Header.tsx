@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { SectionId, Language } from '../types';
-import { NAVIGATION_ITEMS, LANGUAGES } from '../constants';
+import { SectionId, Language } from '../types.ts';
+import { NAVIGATION_ITEMS, LANGUAGES } from '../constants.tsx';
 
 interface HeaderProps {
   activeId: SectionId;

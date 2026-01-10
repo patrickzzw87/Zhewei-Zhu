@@ -1,5 +1,5 @@
 
-import { Language } from './types';
+import { Language } from './types.ts';
 
 export const translations: Record<Language, any> = {
   zh: {

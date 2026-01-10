@@ -1,14 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import { SectionId, Language } from './types';
-import Header from './components/Header';
-import BrandSection from './sections/BrandSection';
-import IntelligenceSection from './sections/IntelligenceSection';
-import SolutionsSection from './sections/SolutionsSection';
-import CasesSection from './sections/CasesSection';
-import PitchSection from './sections/PitchSection';
-import LeadFormSection from './sections/LeadFormSection';
-import { translations } from './translations';
+import { SectionId, Language } from './types.ts';
+import Header from './components/Header.tsx';
+import BrandSection from './sections/BrandSection.tsx';
+import IntelligenceSection from './sections/IntelligenceSection.tsx';
+import SolutionsSection from './sections/SolutionsSection.tsx';
+import CasesSection from './sections/CasesSection.tsx';
+import PitchSection from './sections/PitchSection.tsx';
+import LeadFormSection from './sections/LeadFormSection.tsx';
+import { translations } from './translations.ts';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<SectionId>(SectionId.Overview);
