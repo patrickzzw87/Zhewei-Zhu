@@ -1,22 +1,6 @@
 
 import { Language } from './types.ts';
 
-const buildTemplate = (lang: string) => ({
-  brandName: lang === 'zh' ? "三本照明科技" : "SANBEN TECH",
-  subTitle: "Lighting Technology",
-  capture: "Capture",
-  footer: "© 2025 SHANGHAI SANBEN LIGHTING TECHNOLOGY CO., LTD.",
-  sections: {
-    brand: { title: "", subtitle: "", p1: "", p2: "", feat1: "", feat2: "", feat3: "", stat1: "", stat2: "", stat3: "", stat4: "", network: "", lab: "", bases: { sh: "", gd: "", fj: "", js: "" } },
-    strategy: { title: "", subtitle: "", strategyTitle: "", strategyVision: "", strategyDesc: "", valueTitle: "", v1: "", v1d: "", v2: "", v2d: "", v3: "", v3d: "", v4: "", v4d: "" },
-    intelligence: { title: "", subtitle: "", v2: "", v2desc: "", hueTitle: "", hueDesc: "", colors: "", saving: "", cloudTitle: "", cloudFeat1: "", cloudFeat2: "", cloudFeat3: "", cloudFeat4: "", productTitle: "", productDesc: "" },
-    solutions: { title: "", subtitle: "", designTitle: "", designDesc: "", delivered: "", experts: "", m1: "", m1d: "", m2: "", m2d: "", m3: "", m3d: "", m4: "", m4d: "", m5: "", m5d: "", m6: "" },
-    cases: { title: "", subtitle: "", serving: "", commercial: "", commDesc: "", education: "", eduDesc: "", outdoor: "", outDesc: "" },
-    pitch: { title: "", subtitle: "", ksp: "", k1: "", k1d: "", k2: "", k2d: "", k3: "", k3d: "" },
-    lead: { title: "", subtitle: "", company: "", contact: "", country: "", whatsapp: "", email: "", interest: "", priority: "", priorityH: "", priorityM: "", priorityL: "", notes: "", submit: "", history: "", noLeads: "", tipTitle: "", tipDesc: "" }
-  }
-});
-
 export const translations: Record<Language, any> = {
   zh: {
     brandName: "三本照明科技",
@@ -28,9 +12,9 @@ export const translations: Record<Language, any> = {
         title: "企业介绍",
         subtitle: "大国地标背书",
         p1: "始于2005年，三本照明科技深耕商超照明领域20年。",
-        p2: "作为国家体育场“鸟巢”官方智慧照明供应商，我们以航天级的标准服务全球顶级连锁品牌。目前拥有上海、广东、福建、江苏四大自有生产基地。",
+        p2: "作为国家体育场“鸟巢”官方智慧照明供应商，三本照明以国家级品质标准赋能全球顶级连锁品牌。依托上海、广东、福建、江苏四大生产基地及20余家全国服务商网络，我们已为全球超过1000个商业连锁品牌提供卓越的照明解决方案，以光影重塑商业空间价值。",
         feat1: "连续10年国家高新技术企业",
-        feat2: "国家级专精特新“小巨人”企业",
+        feat2: "国家体育场“鸟巢”官方智慧照明供应商",
         feat3: "国家级科技型中小企业",
         stat1: "核心发明专利",
         stat2: "实用新型专利",
@@ -63,8 +47,9 @@ export const translations: Record<Language, any> = {
         saving: "线材与人工成本节约",
         cloudTitle: "云端智控特性",
         cloudFeat1: "去中心化结构", cloudFeat2: "多权限管理", cloudFeat3: "智能跳频抗干扰", cloudFeat4: "无需改线对码",
-        productTitle: "核心黑科技",
-        productDesc: "极具透视感和宽阔光束表现力的现代建筑光效技术。"
+        productTitle: "核心黑科技：超广角系列射灯",
+        productDesc: "横扫多项国际大奖。凭借卓越的控光能力与超宽光束表现力，为现代建筑营造极具透视感的顶级光影体验。",
+        awards: ["2024 阿拉丁神灯奖 - 全国优秀产品奖", "2024 美国 IDSA 决赛入围奖", "2024 美国 GOOD DESIGN 银奖", "2024 法国设计奖 (FRENCH DESIGN AWARD)"]
       },
       solutions: {
         title: "商业方案",
@@ -86,7 +71,8 @@ export const translations: Record<Language, any> = {
         serving: "为全球超过1,000家连锁企业提供服务",
         commercial: "商业零售", commDesc: "大润发、沃尔玛、山姆会员店等合作伙伴。",
         education: "教育空间", eduDesc: "专业护眼教室照明、大学礼堂等。",
-        outdoor: "户外景观", outDesc: "临港科技城、九江大中路等大型景观工程。"
+        outdoor: "户外景观", outDesc: "临港科技城、九江大中路等大型景观工程。",
+        servingCount: "1000+"
       },
       pitch: {
         title: "展会话术",
@@ -113,9 +99,9 @@ export const translations: Record<Language, any> = {
         title: "Company Introduction",
         subtitle: "National Landmark Endorsement",
         p1: "Founded in 2005, 20 years of expertise in retail lighting.",
-        p2: "Official supplier for the 'Bird's Nest', with 4 self-owned manufacturing bases in SH, GD, FJ, JS, serving 1,000+ global brands.",
+        p2: "As the official smart lighting supplier for the 'Bird's Nest' National Stadium, SANBEN empowers top-tier global brands with national-grade quality standards. Supported by four manufacturing bases in Shanghai, Guangdong, Fujian, and Jiangsu, and a network of 20+ service distributors, we provide professional lighting solutions to over 1,000+ brands worldwide.",
         feat1: "National High-Tech Enterprise",
-        feat2: "Specialized 'Little Giant' Enterprise",
+        feat2: "Official Supplier for the 'Bird's Nest' Stadium",
         feat3: "National Tech-based Enterprise",
         stat1: "Invention Patents",
         stat2: "Utility Patents",
@@ -148,8 +134,9 @@ export const translations: Record<Language, any> = {
         saving: "Labor & Wiring Saving",
         cloudTitle: "Cloud Features",
         cloudFeat1: "Decentralized", cloudFeat2: "Multi-Admin", cloudFeat3: "Anti-Interference", cloudFeat4: "Easy Config",
-        productTitle: "Core Tech",
-        productDesc: "Architectural light performance with strong perspective."
+        productTitle: "Ultra-Wide Angle Spotlight Series",
+        productDesc: "Recipient of multiple international awards. Redefining modern architectural light with superior beam performance and perspective.",
+        awards: ["2024 ALIGHTING AWARD - NATIONAL EXCELLENT PRODUCT", "2024 IDSA - FEATURED FINALIST", "2024 AMERICAN GOOD DESIGN SILVER AWARD", "2024 FRENCH DESIGN AWARD"]
       },
       solutions: {
         title: "Commercial",
@@ -198,9 +185,9 @@ export const translations: Record<Language, any> = {
         title: "Unternehmensvorstellung",
         subtitle: "Nationales Wahrzeichen Endorsement",
         p1: "Gegründet 2005, 20 Jahre Expertise in der Einzelhandelsbeleuchtung.",
-        p2: "Offizieller Lieferant für das 'Vogelnest', mit 4 Fabriken in SH, GD, FJ, JS.",
+        p2: "Als offizieller Lieferant des 'Vogelnest'-Stadions stattet SANBEN globale Ketten mit nationalem Qualitätsstandard aus. Mit 4 Fabriken und 20+ Händlern weltweit.",
         feat1: "Nationales High-Tech-Unternehmen",
-        feat2: "Spezialisierter 'Kleiner Riese'",
+        feat2: "Offizieller Lieferant des 'Vogelnest'-Stadions",
         feat3: "Nationales Technik-Unternehmen",
         stat1: "Patente", stat2: "Gebrauchsmuster", stat3: "Design", stat4: "Basen",
         network: "20+ Händler", lab: "Nationales Labor",
@@ -229,8 +216,9 @@ export const translations: Record<Language, any> = {
         saving: "Energieersparnis",
         cloudTitle: "Cloud-Features",
         cloudFeat1: "Dezentral", cloudFeat2: "Multi-Admin", cloudFeat3: "Störfest", cloudFeat4: "Einfach",
-        productTitle: "Kerntechnik",
-        productDesc: "Architektonische Lichtleistung."
+        productTitle: "Ultraweitwinkel-Strahler-Serie",
+        productDesc: "Gewinner zahlreicher internationaler Preise. Neudefinition der modernen Lichtgestaltung.",
+        awards: ["2024 ALIGHTING AWARD", "2024 IDSA FINALIST", "2024 AMERICAN GOOD DESIGN SILVER", "2024 FRENCH DESIGN AWARD"]
       },
       solutions: {
         title: "Einzelhandel",
@@ -279,9 +267,9 @@ export const translations: Record<Language, any> = {
         title: "مقدمة الشركة",
         subtitle: "اعتماد المعالم الوطنية",
         p1: "تأسست في عام 2005، 20 عاماً من الخبرة في إضاءة التجزئة.",
-        p2: "المورد الرسمي لـ 'عش الطائر'، مع 4 قواعد تصنيع.",
+        p2: "بصفتنا المورد الرسمي لاستاد 'عش الطائر'، نقوم بتجهيز السلاسل العالمية بمعايير الجودة الوطنية. لدينا 4 قواعد تصنيع وشبكة من 20+ موزعاً.",
         feat1: "مؤسسة وطنية للتكنولوجيا الفائقة",
-        feat2: "مؤسسة 'العملاق الصغير' المتخصصة",
+        feat2: "المورد الرسمي لاستاد 'عش الطائر'",
         feat3: "مؤسسة وطنية قائمة على التكنولوجيا",
         stat1: "براءات الاختراع", stat2: "النماذج", stat3: "التصاميم", stat4: "القواعد",
         network: "20+ موزعين", lab: "مختبر وطني",
@@ -310,8 +298,9 @@ export const translations: Record<Language, any> = {
         saving: "توفير الطاقة",
         cloudTitle: "ميزات السحاب",
         cloudFeat1: "لامركزي", cloudFeat2: "إدارة متعددة", cloudFeat3: "مقاوم للتداخل", cloudFeat4: "سهل الضبط",
-        productTitle: "التكنولوجيا الأساسية",
-        productDesc: "أداء ضوئي معماري مذهل."
+        productTitle: "سلسلة الأضواء الكاشفة ذات الزاوية العريضة",
+        productDesc: "حائز على العديد من الجوائز الدولية. إعادة تعريف الإضاءة المعمارية الحديثة.",
+        awards: ["جائزة ALIGHTING 2024", "نهائي IDSA 2024", "جائزة GOOD DESIGN الأمريكية الفضية", "جائزة التصميم الفرنسية 2024"]
       },
       solutions: {
         title: "التجارية",
@@ -360,9 +349,9 @@ export const translations: Record<Language, any> = {
         title: "Introduction",
         subtitle: "Approuvé par des Monuments Nationaux",
         p1: "Fondé en 2005, 20 ans d'expertise en éclairage de détail.",
-        p2: "Fournisseur officiel du 'Nid d'Oiseau', avec 4 bases de fabrication.",
+        p2: "En tant que fournisseur officiel du stade 'Nid d'Oiseau', SANBEN équipe les chaînes mondiales avec un standard de qualité national. Nous possédons 4 bases de production et 20+ distributeurs.",
         feat1: "Entreprise High-Tech Nationale",
-        feat2: "Entreprise 'Petit Géant' Spécialisée",
+        feat2: "Fournisseur Officiel du Stade 'Nid d'Oiseau'",
         feat3: "Entreprise Technologique Nationale",
         stat1: "Brevets d'Invention", stat2: "Brevets d'Utilité", stat3: "Design", stat4: "Bases",
         network: "20+ Distributeurs", lab: "Laboratoire Standard",
@@ -391,8 +380,9 @@ export const translations: Record<Language, any> = {
         saving: "Économie d'Énergie",
         cloudTitle: "Fonctions Cloud",
         cloudFeat1: "Décentralisé", cloudFeat2: "Multi-Admin", cloudFeat3: "Anti-Interférence", cloudFeat4: "Simple",
-        productTitle: "Technologie de Pointe",
-        productDesc: "Performance lumineuse architecturale."
+        productTitle: "Série de Projecteurs à Angle Ultra-Large",
+        productDesc: "Lauréat de plusieurs prix internationaux. Redéfinit l'éclairage architectural moderne.",
+        awards: ["PRIX ALIGHTING 2024", "FINALISTE IDSA 2024", "AMERICAN GOOD DESIGN SILVER", "PRIX DU DESIGN FRANÇAIS 2024"]
       },
       solutions: {
         title: "Solutions",
@@ -441,9 +431,9 @@ export const translations: Record<Language, any> = {
         title: "Introducción",
         subtitle: "Respaldo de Monumentos Nacionales",
         p1: "Fundada en 2005, 20 años de experiencia en iluminación retail.",
-        p2: "Proveedor oficial del 'Nido de Pájaro', con 4 bases en SH, GD, FJ, JS.",
+        p2: "Como proveedor oficial del estadio 'Nido de Pájaro', SANBEN equipa a cadenas globales con estándares nacionales. Contamos con 4 bases de producción y 20+ distribuidores.",
         feat1: "Empresa de Alta Tecnología Nacional",
-        feat2: "Empresa 'Pequeño Gigante' Especializada",
+        feat2: "Proveedor Oficial del Estadio 'Nido de Pájaro'",
         feat3: "Empresa Tecnológica Nacional",
         stat1: "Patentes Invención", stat2: "Utilidad", stat3: "Diseño", stat4: "Bases",
         network: "20+ Distribuidores", lab: "Lab Estándar",
@@ -472,8 +462,9 @@ export const translations: Record<Language, any> = {
         saving: "Ahorro de Energía",
         cloudTitle: "Funciones Cloud",
         cloudFeat1: "Descentralizado", cloudFeat2: "Multi-Admin", cloudFeat3: "Anti-Interferencias", cloudFeat4: "Fácil",
-        productTitle: "Tecnología Core",
-        productDesc: "Rendimiento lumínico arquitectónico."
+        productTitle: "Serie de Focos de Ángulo Ultra-Amplio",
+        productDesc: "Ganador de múltiples premios internacionales. Redefiniendo la iluminación arquitectónica.",
+        awards: ["PREMIO ALIGHTING 2024", "FINALISTA IDSA 2024", "GOOD DESIGN SILVER", "PREMIO DISEÑO FRANCÉS 2024"]
       },
       solutions: {
         title: "Soluciones",
@@ -522,9 +513,9 @@ export const translations: Record<Language, any> = {
         title: "Introductie",
         subtitle: "Nationale Erkenning",
         p1: "Opgericht in 2005, 20 jaar ervaring in retailverlichting.",
-        p2: "Officiële leverancier voor het 'Vogelnest', met 4 fabrieken.",
+        p2: "Als officieel leverancier van het 'Vogelnest'-stadion rust SANBEN wereldwijde ketens uit met nationale kwaliteitsnormen. We hebben 4 fabrieken en 20+ distributeurs.",
         feat1: "Nationaal High-Tech Bedrijf",
-        feat2: "Gespecialiseerde 'Kleine Reus'",
+        feat2: "Officieel Leverancier van het 'Vogelnest'-Stadion",
         feat3: "Technologisch Bedrijf",
         stat1: "Patenten", stat2: "Modellen", stat3: "Design", stat4: "Bases",
         network: "20+ Dealernetwerk", lab: "Standaard Lab",
@@ -553,8 +544,9 @@ export const translations: Record<Language, any> = {
         saving: "Energiebesparing",
         cloudTitle: "Cloud-functies",
         cloudFeat1: "Gedecentraliseerd", cloudFeat2: "Multi-Admin", cloudFeat3: "Storingsvrij", cloudFeat4: "Eenvoudig",
-        productTitle: "Kerntechnologie",
-        productDesc: "Architecturale lichtprestaties."
+        productTitle: "Ultra-Groothoek Spot-Serie",
+        productDesc: "Ontvanger van meerdere internationale prijzen. Een nieuwe standaard voor moderne architectuur.",
+        awards: ["2024 ALIGHTING AWARD", "2024 IDSA FINALIST", "2024 AMERICAN GOOD DESIGN", "2024 FRENCH DESIGN AWARD"]
       },
       solutions: {
         title: "Oplossingen",
@@ -603,13 +595,13 @@ export const translations: Record<Language, any> = {
         title: "Introdução",
         subtitle: "Aprovado por Marcos Nacionais",
         p1: "Fundada em 2005, 20 anos de experiência em iluminação de retalho.",
-        p2: "Fornecedor oficial do 'Ninho de Pássaro', com 4 bases em SH, GD, FJ, JS.",
+        p2: "Como fornecedor oficial do estádio 'Ninho de Pássaro', a SANBEN equipa cadeias globais com padrões nacionais. Contamos com 4 bases de produção e 20+ distribuidores.",
         feat1: "Empresa de Alta Tecnologia Nacional",
-        feat2: "Empresa 'Pequeno Gigante' Especializada",
+        feat2: "Fornecedor Oficial do Estádi o 'Ninho de Pássaro'",
         feat3: "Empresa de Tecnologia Nacional",
         stat1: "Patentes", stat2: "Utilidade", stat3: "Design", stat4: "Bases",
         network: "20+ Distribuidores", lab: "Lab Padrão",
-        bases: { sh: "Sede Xangai", gd: "Base Guangdong", fj: "Base Fujian", js: "Base Jiangsu" }
+        bases: { sh: "Sede Xangai", gd: "Base Guangdong", fj: "Base Fuji an", js: "Base Jiangsu" }
       },
       strategy: {
         title: "Estratégia",
@@ -634,8 +626,9 @@ export const translations: Record<Language, any> = {
         saving: "Economia de Energia",
         cloudTitle: "Funções Cloud",
         cloudFeat1: "Descentralizado", cloudFeat2: "Multi-Admin", cloudFeat3: "Anti-Interferência", cloudFeat4: "Fácil",
-        productTitle: "Tecnologia Core",
-        productDesc: "Desempenho lumínico arquitetónico."
+        productTitle: "Série de Projetores de Ângulo Ultra-Largo",
+        productDesc: "Vencedor de vários prémios internacionais. Redefinindo a iluminação arquitetónica.",
+        awards: ["PRÉMIO ALIGHTING 2024", "FINALISTA IDSA 2024", "AMERICAN GOOD DESIGN", "FRENCH DESIGN AWARD"]
       },
       solutions: {
         title: "Soluções",
@@ -681,25 +674,25 @@ export const translations: Record<Language, any> = {
     footer: "© 2025 SHANGHAI SANBEN LIGHTING TECHNOLOGY CO., LTD.",
     sections: {
       brand: {
-        title: "企業紹介",
-        subtitle: "国家プロジェクトの実績",
-        p1: "2005年設立、小売照明分野で20年の専門知識。",
-        p2: "北京五輪「鳥の巣」公式サプライヤー。SH、GD、FJ、JSに4つの生産拠点。",
-        feat1: "国家ハイテク企業",
-        feat2: "専精特新「小巨人」企業",
-        feat3: "国家技術型中小企業",
-        stat1: "発明特許", stat2: "実用新案", stat3: "デザイン", stat4: "拠点",
-        network: "20+ 販売網", lab: "国家標準ラボ",
-        bases: { sh: "上海本部", gd: "広東拠点", fj: "福建拠点", js: "江苏拠点" }
+        title: "企业紹介",
+        subtitle: "国家プロジェクトの実绩",
+        p1: "2005年设立、小売照明分野で20年の専门知识。",
+        p2: "「鸟の巣」公式サプライヤーとして、三本照明は国家级の品质でグローバルチェーンを支援します。4つの拠点と20以上の贩売网を保有。",
+        feat1: "国家ハイテク企业",
+        feat2: "「鸟の巣」スタジアム公式サプライヤー",
+        feat3: "国家技术型中小企业",
+        stat1: "発明天许", stat2: "実用新案", stat3: "デザイン", stat4: "拠点",
+        network: "20+ 贩売网", lab: "国家标准ラボ",
+        bases: { sh: "上海本部", gd: "広东拠点", fj: "福建拠点", js: "江苏拠点" }
       },
       strategy: {
         title: "ブランド戦略",
-        subtitle: "2026年グローバル成長計画",
+        subtitle: "2026年グローバル成长计画",
         strategyTitle: "戦略的ポジショニング",
-        strategyVision: "スマート小売照明の国際的エキスパート",
-        strategyDesc: "2026年はグローバル成長への転換点です。",
+        strategyVision: "スマート小売照明の国际的エキスパート",
+        strategyDesc: "2026年はグローバル成长への転换点です。",
         valueTitle: "4つの核心的価値",
-        v1: "国家級の信頼性", v1d: "複雑な大型プロジェクトへの対応力。",
+        v1: "国家级の信頼性", v1d: "複雑な大型プロジェクトへの対応力。",
         v2: "プラットフォーム知能", v2d: "Cloud V2.0とOmniHue™技術。",
         v3: "パートナー型カスタム", v3d: "店舗ごとの最適解を提案。",
         v4: "グローバル品質", v4d: "国際的なデザイン賞を受賞。"
@@ -715,8 +708,9 @@ export const translations: Record<Language, any> = {
         saving: "省エネ効果",
         cloudTitle: "クラウド機能",
         cloudFeat1: "分散型", cloudFeat2: "マルチ管理", cloudFeat3: "耐干渉", cloudFeat4: "簡単設定",
-        productTitle: "コア技術",
-        productDesc: "建築的な光のパフォーマンス。"
+        productTitle: "超広角シリーズ・スポットライト",
+        productDesc: "複数の国際的な賞を受賞。現代建築の照明体験を再定義します。",
+        awards: ["2024 アラジン・ランプ賞", "2024 IDSAファイナリスト", "2024 AMERICAN GOOD DESIGN", "2024 フランス・デザイン賞"]
       },
       solutions: {
         title: "商業提案",
@@ -765,9 +759,9 @@ export const translations: Record<Language, any> = {
         title: "기업 소개",
         subtitle: "국가 랜드마크 실적",
         p1: "2005년 설립, 리테일 조명 분야 20년 전문성.",
-        p2: "베이징 '냐오차오' 공식 공급업체. 4개 생산 기지 보유.",
+        p2: "국가 경기장 '냐오차오' 공식 공급업체인 산본 조명은 국가급 품질로 글로벌 체인을 지원합니다. 4개 생산 기지와 20개 이상의 유통망을 보유하고 있습니다.",
         feat1: "국가 하이테크 기업",
-        feat2: "전정특신 '소거인' 기업",
+        feat2: "국가 경기장 '냐오차오' 공식 공급업체",
         feat3: "국가 기술형 중소기업",
         stat1: "발명 특허", stat2: "실용신안", stat3: "디자인", stat4: "기지",
         network: "20+ 유통망", lab: "국가 표준 랩",
@@ -796,8 +790,9 @@ export const translations: Record<Language, any> = {
         saving: "에너지 절감",
         cloudTitle: "클라우드 기능",
         cloudFeat1: "분산 구조", cloudFeat2: "멀티 관리", cloudFeat3: "간섭 방지", cloudFeat4: "간편 설정",
-        productTitle: "핵심 기술",
-        productDesc: "건축적 조명 퍼포먼스."
+        productTitle: "초광각 시리즈 스포트라이트",
+        productDesc: "다수의 국제 어워드 수상. 현대 건축의 조명 경험을 새롭게 정의합니다.",
+        awards: ["2024 알라딘 램프상", "2024 IDSA 파이널리스트", "2024 AMERICAN GOOD DESIGN", "2024 프랑스 디자인 어워드"]
       },
       solutions: {
         title: "상업 솔루션",

@@ -10,6 +10,7 @@ const IntelligenceSection: React.FC<{ t: any }> = ({ t }) => {
         <div className="h-px w-24 bg-red-600" />
       </header>
 
+      {/* Cloud & Spectrum Section */}
       <section className="grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative group overflow-hidden rounded-sm shadow-xl bg-slate-900">
           <img 
@@ -52,22 +53,55 @@ const IntelligenceSection: React.FC<{ t: any }> = ({ t }) => {
         </div>
       </section>
 
-      <section className="bg-slate-900 text-white p-12 rounded-sm overflow-hidden relative border border-slate-800">
-         <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 text-start">
-              <h3 className="text-3xl font-light uppercase tracking-[0.1em]">{intel.productTitle.toUpperCase()}</h3>
-              <p className="text-slate-400 font-light leading-relaxed uppercase">{intel.productDesc.toUpperCase()}</p>
-              <div className="flex flex-wrap gap-4">
-                 <div className="px-4 py-2 border border-slate-700 text-[10px] tracking-widest uppercase bg-slate-800/50 font-bold">FRENCH DESIGN AWARD</div>
-                 <div className="px-4 py-2 border border-slate-700 text-[10px] tracking-widest uppercase bg-slate-800/50 font-bold">IDSA FINALIST</div>
+      {/* Award-Winning Ultra-Wide Spotlights Section */}
+      <section className="bg-red-600 text-white p-8 md:p-16 rounded-sm overflow-hidden relative shadow-2xl">
+         {/* Background accent */}
+         <div className="absolute top-0 right-0 w-1/2 h-full bg-black/10 skew-x-12 translate-x-1/4 pointer-events-none" />
+         
+         <div className="relative z-10 grid lg:grid-cols-5 gap-12 items-center">
+            <div className="lg:col-span-3 space-y-10 text-start">
+              <div className="space-y-4">
+                <p className="text-[10px] font-black tracking-[0.4em] text-red-200 uppercase">Featured Innovation</p>
+                <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tight leading-none italic">{intel.productTitle.toUpperCase()}</h3>
+                <p className="text-red-50 text-base font-light leading-relaxed uppercase max-w-xl">{intel.productDesc.toUpperCase()}</p>
+              </div>
+              
+              <div className="grid sm:grid-cols-2 gap-4 pt-4">
+                {intel.awards.map((award: string, i: number) => (
+                  <div key={i} className="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-sm flex items-center gap-3 hover:bg-white/20 transition-all group">
+                    <div className="w-1.5 h-full bg-white group-hover:bg-yellow-400 transition-colors" />
+                    <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest leading-tight">{award}</span>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="relative group">
-              <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
-                alt="ULTRA WIDE BEAM PERFORMANCE" 
-                className="w-full max-sm mx-auto rounded-sm shadow-[0_0_50px_rgba(255,255,255,0.1)] transition-all duration-700 group-hover:shadow-[0_0_60px_rgba(220,38,38,0.3)] brightness-110" 
-              />
+            
+            <div className="lg:col-span-2 relative group">
+              <div className="relative bg-white/5 p-4 rounded-sm border border-white/10 shadow-inner overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=800" 
+                  alt="ULTRA WIDE BEAM PERFORMANCE" 
+                  className="w-full h-auto rounded-sm shadow-2xl transition-all duration-1000 group-hover:scale-110 brightness-110" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-red-600/20 to-transparent pointer-events-none" />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-4 border-b-4 border-white/20 pointer-events-none" />
+              <div className="absolute -top-6 -left-6 w-32 h-32 border-l-4 border-t-4 border-white/20 pointer-events-none" />
+            </div>
+         </div>
+         
+         <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap gap-12 justify-center lg:justify-start">
+            <div className="text-center">
+              <p className="text-2xl font-black text-white italic">CRI 95+</p>
+              <p className="text-[9px] text-red-200 uppercase tracking-widest font-bold">Museum-Grade Accuracy</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-black text-white italic">ULTRA-WIDE</p>
+              <p className="text-[9px] text-red-200 uppercase tracking-widest font-bold">Beam Performance</p>
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-black text-white italic">IoT READY</p>
+              <p className="text-[9px] text-red-200 uppercase tracking-widest font-bold">Smart Cloud Control</p>
             </div>
          </div>
       </section>

@@ -35,10 +35,12 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ language }) => {
         contents: userMessage,
         config: {
           systemInstruction: `You are '三本AI助手' (SANBEN AI Assistant), an expert customer service representative for SANBEN Lighting Technology (上海三本照明科技) at the Dubai Exhibition. 
-          Company Profile: 20 years expertise in retail lighting. Official supplier for China's National Stadium 'Bird's Nest'. 
+          Company Profile: 20 years expertise in retail lighting. Official supplier for China's National Stadium 'Bird's Nest' (National Landmark).
+          Value Proposition: National-grade quality standards for top-tier global chain brands.
+          Manufacturing: 4 major bases (Shanghai, Guangdong, Fujian, Jiangsu).
+          Service: 20+ professional service providers nationwide. Global service to 1,000+ brands.
           Key Technologies: OmniHue™ Full Spectrum (CRI 95+), SANBEN Cloud V2.0 (Wireless Mesh IoT, 30% energy saving).
-          Manufacturing: 4 bases (SH, GD, FJ, JS).
-          Partners: Walmart, Aldi, Sam's Club, ALDI.
+          Partners: Walmart, Aldi, Sam's Club, Carrefour, etc.
           Voice: Professional, helpful, concise, and futuristic. Respond in the language used by the visitor (${language}). Always introduce yourself as 三本AI助手.`,
           temperature: 0.7,
         },
@@ -139,10 +141,10 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ language }) => {
         )}
       </button>
 
-      {/* Chat Window - Modified to be more rectangular (wider and slightly shorter proportionally on desktop) */}
+      {/* Chat Window */}
       {isOpen && (
         <div className="fixed bottom-24 right-6 z-[60] w-[90vw] md:w-[520px] h-[65vh] md:h-[550px] bg-white border border-slate-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] rounded-sm flex flex-col animate-in slide-in-from-bottom-4 fade-in duration-300 overflow-hidden">
-          {/* Header with full name clearly visible */}
+          {/* Header */}
           <header className="p-6 bg-gradient-to-r from-slate-900 to-slate-800 text-white flex items-center justify-between shadow-lg border-b border-white/5">
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 bg-red-600 rounded-sm flex items-center justify-center font-bold text-lg shadow-xl ring-1 ring-white/20">三</div>
