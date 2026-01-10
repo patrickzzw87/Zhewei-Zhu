@@ -1,8 +1,8 @@
 
 {
-  "name": "SANBEN Lighting Dubai 2025",
-  "short_name": "SANBEN",
-  "description": "SANBEN Lighting Technology Exhibition Interactive Handbook",
+  "name": "三本照明科技 Dubai 2025",
+  "short_name": "三本照明科技",
+  "description": "三本照明科技迪拜展会互动手册",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",

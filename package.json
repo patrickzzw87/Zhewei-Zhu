@@ -1,5 +1,5 @@
 {
-  "name": "三本照明迪拜展会互动手册",
+  "name": "三本照明科技-2026展会互动平台",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "@google/genai": "^1.35.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

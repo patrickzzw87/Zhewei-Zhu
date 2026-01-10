@@ -3,11 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { SectionId, Language } from './types.ts';
 import Header from './components/Header.tsx';
 import BrandSection from './sections/BrandSection.tsx';
+import StrategySection from './sections/StrategySection.tsx';
 import IntelligenceSection from './sections/IntelligenceSection.tsx';
 import SolutionsSection from './sections/SolutionsSection.tsx';
 import CasesSection from './sections/CasesSection.tsx';
 import PitchSection from './sections/PitchSection.tsx';
 import LeadFormSection from './sections/LeadFormSection.tsx';
+import AIAssistant from './components/AIAssistant.tsx';
 import { translations } from './translations.ts';
 
 const App: React.FC = () => {
@@ -18,7 +20,6 @@ const App: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    // Handle RTL for Arabic
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.lang = language;
   }, [activeSection, language]);
@@ -27,6 +28,7 @@ const App: React.FC = () => {
     const props = { language, t: t.sections };
     switch (activeSection) {
       case SectionId.Overview: return <BrandSection {...props} />;
+      case SectionId.Strategy: return <StrategySection {...props} />;
       case SectionId.Intelligence: return <IntelligenceSection {...props} />;
       case SectionId.Solutions: return <SolutionsSection {...props} />;
       case SectionId.Cases: return <CasesSection {...props} />;
@@ -55,6 +57,9 @@ const App: React.FC = () => {
       <footer className="py-8 border-t border-slate-100 px-6 text-center text-slate-400 text-[10px] tracking-widest uppercase">
         {t.footer}
       </footer>
+
+      {/* AI Assistant FAB and Chat Window */}
+      <AIAssistant language={language} />
     </div>
   );
 };

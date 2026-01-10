@@ -1,6 +1,7 @@
 
 export enum SectionId {
   Overview = 'overview',
+  Strategy = 'strategy',
   Intelligence = 'intelligence',
   Solutions = 'solutions',
   Cases = 'cases',
@@ -8,7 +9,7 @@ export enum SectionId {
   LeadForm = 'leadform'
 }
 
-export type Language = 'zh' | 'en' | 'de' | 'ar';
+export type Language = 'zh' | 'en' | 'de' | 'ar' | 'fr' | 'es' | 'nl' | 'pt' | 'ja' | 'ko';
 
 export interface CustomerLead {
   id: string;
