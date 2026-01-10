@@ -8,6 +8,8 @@ export enum SectionId {
   LeadForm = 'leadform'
 }
 
+export type Language = 'zh' | 'en' | 'de' | 'ar';
+
 export interface CustomerLead {
   id: string;
   companyName: string;
@@ -23,6 +25,5 @@ export interface CustomerLead {
 
 export interface NavItem {
   id: SectionId;
-  label: string;
-  enLabel: string;
+  label: { [key in Language]: string };
 }
