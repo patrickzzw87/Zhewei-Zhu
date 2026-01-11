@@ -29,9 +29,11 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ language }) => {
     setIsTyping(true);
 
     try {
+      // Use named parameter for initialization and ensure API key is from process.env.API_KEY
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       const response = await ai.models.generateContent({
-        model: 'gemini-3-flash-preview',
+        // Using gemini-3-pro-preview as suggested for expert assistant (Complex Text Task)
+        model: 'gemini-3-pro-preview',
         contents: userMessage,
         config: {
           systemInstruction: `You are '三本AI助手' (SANBEN AI Assistant), an expert customer service representative for SANBEN Lighting Technology (上海三本照明科技) at the Dubai Exhibition. 
@@ -46,6 +48,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ language }) => {
         },
       });
 
+      // Extract text output directly from the .text property of GenerateContentResponse
       const aiResponse = response.text || "I'm sorry, I couldn't process that. / 抱歉，我无法处理该请求。";
       setMessages(prev => [...prev, { role: 'assistant', text: aiResponse }]);
     } catch (error) {
@@ -101,7 +104,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ language }) => {
     },
     pt: {
       name: "三本AI助手 (Assistente SANBEN)",
-      welcome: "Bem-vindo à SANBEN! Pergunte sobre especificações, casos ou sistemas inteligentes.",
+      welcome: "Bem-vindo à SANBEN! Pergunte sobre especificações, casos o sistemas inteligentes.",
       placeholder: "Sua mensagem...",
       prompts: ["Sobre OmniHue™", "Caso Ninho de Pássaro", "Economizar energia?"]
     },

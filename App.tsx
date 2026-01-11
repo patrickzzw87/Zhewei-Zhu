@@ -14,7 +14,8 @@ import { translations } from './translations.ts';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState<SectionId>(SectionId.Overview);
-  const [language, setLanguage] = useState<Language>('zh');
+  // Defaulting to English for Dubai Exhibition
+  const [language, setLanguage] = useState<Language>('en');
 
   const t = translations[language];
 
